@@ -90,31 +90,30 @@
     </section>
 
     <!-- Settings Tab -->
-    <section id="settings-section" style="display:none; padding: 16px;">
-    <h2>Settings</h2>
+    <!-- Settings Button -->
+<button id="settings-button">Settings</button>
 
-    <div class="settings-item">
-        <label>Remove Ads</label>
-        <p>(Feature coming later)</p>
-    </div>
-
-    <div class="settings-item">
-        <label>About</label>
-        <p>This app provides QR scanning, PDF conversion, and image compression tools.</p>
-    </div>
-
-    <div class="settings-item">
-        <label>Help</label>
-        <p>If something is not working, try restarting the app or checking permissions.</p>
-    </div>
-
-    <div style="margin-top: 20px; opacity: 0.6; font-size: 0.9em;">
-        This PWA is a local-first tool. No backend required.
-    </div>
-</section>
-
-
+<!-- Settings Section -->
+<div id="settings-section" style="display: none;">
+  <h2>Settings</h2>
+  <ul>
+    <li>Remove Ads (Future)</li>
+    <li>About</li>
+    <li>Help</li>
+  </ul>
+  <p style="color: #888;">This PWA is a sample local-first tool. No backend required.</p>
+  <button id="back-button">Back</button>
 </div>
+
+<script>
+  const settingsButton = document.getElementById('settings-button');
+  const backButton = document.getElementById('back-button');
+  const settingsSection = document.getElementById('settings-section');
+
+  // Assume your main sections already have these IDs:
+  const mainSections = [
+    'qr-section',
+   
 
     
   </main>
