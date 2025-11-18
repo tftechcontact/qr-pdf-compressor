@@ -55,5 +55,13 @@ footer { text-align:center; padding:14px; color:var(--muted); font-size:13px; }
     text-align: center;
 }
 
+.settings-item {
+    margin-bottom: 20px;
+}
 
+.settings-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
 
