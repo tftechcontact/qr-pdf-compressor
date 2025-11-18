@@ -6,8 +6,6 @@ const FILES_TO_CACHE = [
   '/style.css',
   '/app.js',
   '/manifest.json',
-  '/ads.css',
-  '/ads.js'
 ];
 
 // Install event: cache app shell
