@@ -6,17 +6,14 @@
   <title>QR PDF & Compressor</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
-  
   <!-- Libraries (CDN) -->
   <script src="https://unpkg.com/html5-qrcode@2.3.7/minified/html5-qrcode.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="https://unpkg.com/browser-image-compression@1.0.15/dist/browser-image-compression.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script> src="ads.js"></script>
 </head>
 <body>
-
   <header>
     <h1>QR PDF & Compressor</h1>
     <p class="tagline">Scan • Generate • Create PDFs • Compress images</p>
@@ -59,18 +56,7 @@
       <h2>Create PDF</h2>
       <textarea id="pdf-text" rows="4" placeholder="Enter text to include in PDF"></textarea>
       <div class="row">
-        <input type="file" id="pdfInput" 
-       accept="image/*,
-               .pdf,application/pdf,
-               .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,
-               .odt,application/vnd.oasis.opendocument.text,
-               .txt,text/plain,
-               .rtf,application/rtf,
-               .html,text/html,
-               .zip,application/zip,
-               .epub,application/epub+zip,
-               .md,text/markdown" 
-       multiple>
+        <input id="pdf-images" type="file" accept="image/*" multiple />
         <button id="btn-create-pdf">Create PDF</button>
       </div>
       <p id="pdf-status">Selected images: 0</p>
@@ -89,22 +75,12 @@
       <div id="compress-results"></div>
     </section>
 
-
     <!-- Settings Tab -->
     <section id="tab-settings" class="tabpane">
       <h2>Settings</h2>
-      <p>Remove Ads This feature will be available in a future update.</p>
-      <p class="small">About This app provides three powerful everyday tools: a QR Code Scanner, a PDF Creator, and an Image Compressor. Designed to work offline using local processing — no backend or external servers required.
-his PWA is a simple local-first tool. No backend required.</p>
-<p>Help
-• Use the QR tab to scan or generate QR codes.
-• Use the PDF tab to convert text or supported files into PDFs.
-• Use the Compressor tab to reduce image file size. </p>
+      <p>Remove Ads (future), About, Help</p>
+      <p class="small">This PWA is a simple local-first tool. No backend required.</p>
     </section>
-
-
-  </main>
-      
   </main>
 
   <footer>
@@ -112,23 +88,6 @@ his PWA is a simple local-first tool. No backend required.</p>
   </footer>
 
   <script src="app.js"></script>
-  
-  <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/qr-pdf-compressor/service-worker.js')
-      .then(function(registration) {
-        console.log('Service Worker registered with scope:', registration.scope);
-      })
-      .catch(function(error) {
-        console.error('Service Worker registration failed:', error);
-      });
-  });
-}
-</script>
-
-
 </body>
 </html>
-
 
