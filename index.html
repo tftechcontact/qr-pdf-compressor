@@ -56,7 +56,19 @@
       <h2>Create PDF</h2>
       <textarea id="pdf-text" rows="4" placeholder="Enter text to include in PDF"></textarea>
       <div class="row">
-        <input id="pdf-images" type="file" accept="image/*" multiple />
+         <input type="file" id="pdfInput" 
+       accept="image/*,
+               .pdf,application/pdf,
+               .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+               .odt,application/vnd.oasis.opendocument.text,
+               .txt,text/plain,
+               .rtf,application/rtf,
+               .html,text/html,
+               .zip,application/zip,
+               .epub,application/epub+zip,
+               .md,text/markdown" 
+       multiple>
+
         <button id="btn-create-pdf">Create PDF</button>
       </div>
       <p id="pdf-status">Selected images: 0</p>
